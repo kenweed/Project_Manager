@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+
   resources :projects do
     resources :tasks do 
       member do
@@ -6,4 +8,6 @@ Rails.application.routes.draw do
       end
     end
   end
+
+  root "projects#index"
 end
