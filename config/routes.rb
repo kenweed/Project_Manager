@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   resources :projects do
-    resources :tasks
+    resources :tasks do 
+      member do
+        patch :complete
+      end
+    end
   end
-  #uing the do makes sure tasks belongs to projects.
-
-
 end
